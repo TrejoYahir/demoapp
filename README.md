@@ -37,3 +37,5 @@ Para crear ejecutable:
 $ ionic build android
 $ ionic build ios
 ```
+
+Informacion detallada para cada plataforma [aquí](http://ionicframework.com/docs/intro/deploying/)
