@@ -1,0 +1,11 @@
+page-table {
+
+    p.complete {
+        color: color($colors, secondary);
+    }
+
+    p.incomplete {
+        color: color($colors, danger);
+    }
+
+}

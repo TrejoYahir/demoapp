@@ -1,0 +1,50 @@
+page-timer {
+
+    .timerContainer {
+        padding-top: 30%;
+        font-weight: bold;
+        font-size: 38px;
+        color: white;
+    }
+
+    .timerCenter {
+        font-size: 64px;
+        transition: all .5s ease;
+    }
+
+    .timerCenter.animate {
+        font-size: 76px;
+        padding-top: 2rem;
+    }
+
+    .timerSide {
+        opacity: .6;
+        padding-top: 25px;
+        transition: all .5s ease;
+    }
+
+    .timerSide.animate {
+        opacity: 0;
+        padding-top: 25px;
+    }
+
+    .altBackground {
+        background-color: color($colors, matRed);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        background-position: bottom;
+        top: 100%;
+    }
+    .altBackground.animate {
+        top: 0%;
+        transition-property: all;
+        transition-timing-function: linear;
+    }
+
+    .altColorText {
+        color: color($colors, matDark);
+    }
+
+}

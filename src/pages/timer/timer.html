@@ -1,0 +1,27 @@
+<!--
+  Generated template for the Timer page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding [ngClass]="{matDark: !altBackground}">
+
+  <ion-grid>
+    <ion-row (swipe)="adjustTimer($event)" text-center class="timerContainer" [ngClass]="{altColorText: altBackground}">
+      <ion-col col-4 class="timerSide" [ngClass]="{animate: isPlaying}" (click)="setTimer(getPreviousSecond())">{{ getPreviousSecond() }}</ion-col>    
+      <ion-col col-4 class="timerCenter" [ngClass]="{animate: isPlaying}">{{ getCurrentSecond() }}</ion-col>
+      <ion-col col-4 class="timerSide" [ngClass]="{animate: isPlaying}" (click)="setTimer(getNextSecond())">{{ getNextSecond() }}</ion-col>    
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab center bottom>
+    <button ion-fab (click)="startCountdown()" [ngClass]="{matDark: isPlaying}">
+      <ion-icon name="play" *ngIf="!isPlaying"></ion-icon>
+      <ion-icon name="square" *ngIf="isPlaying"></ion-icon>      
+    </button>
+  </ion-fab>
+
+</ion-content>
+
+<div class="altBackground" [ngClass]="{animate: isPlaying}" [ngStyle]="{'transition-duration': animationDuration}"></div>
